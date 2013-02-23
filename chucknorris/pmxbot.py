@@ -16,11 +16,7 @@ def norrisquote(client, event, channel, nick, rest):
         rcpt = rest
     else:
         rcpt = channel
-    return random_quote(rcpt)
-
-def random_quote(nick=None):
-    return pronoun.pronounify(quips.random(), 'Chuck Norris', nick)
-
+    return quips.random(rcpt)
 
 def init():
     pronoun.load_nicks(pmxbot.config)
