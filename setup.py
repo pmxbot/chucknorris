@@ -11,9 +11,9 @@ setup_params = dict(
 	packages=setuptools.find_packages(),
 	zip_safe=True,
 	entry_points=dict(
-		pmxbot_handlers={
-			'Chuck Norris quips': 'chucknorris.pmxbot:init',
-		}),
+		pmxbot_handlers=[
+			'Chuck Norris quips=chucknorris.pmxbot:init',
+		]),
 	setup_requires=[
 		'hgtools',
 	],
