@@ -9,6 +9,7 @@ setup_params = dict(
 	author_email="dev@YouGov.com",
 	url="https://bitbucket.org/yougov/chucknorris",
 	packages=setuptools.find_packages(),
+	include_package_data=True,
 	zip_safe=True,
 	entry_points=dict(
 		pmxbot_handlers=[
