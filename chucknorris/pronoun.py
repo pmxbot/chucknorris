@@ -21,7 +21,7 @@ default_gender = 'male'
 
 def load_nicks(config):
     female_nicks.update(config.get('female nicks', []))
-    male_nicks.updtae(config.get('male nicks', []))
+    male_nicks.update(config.get('male nicks', []))
     globals().update(
         default_gender=config.get('default gender', default_gender))
 
