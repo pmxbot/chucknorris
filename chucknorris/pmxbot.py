@@ -1,10 +1,11 @@
 from __future__ import absolute_import
 
+import pmxbot
 from pmxbot.core import command
 from pmxbot.karma import Karma
 
 from . import quips
-import pronoun
+from . import pronoun
 
 @command('norris', aliases=('',),
     doc='Chuck Norris has a website dedicated to pmxbot facts.')
