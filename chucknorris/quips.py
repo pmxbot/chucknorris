@@ -4,7 +4,7 @@ import pkg_resources
 
 from . import pronoun
 
-_quips = [quip.rstrip() for quip in
+_quips = [quip.rstrip().decode('utf-8') for quip in
     pkg_resources.resource_stream('chucknorris', 'quips.txt')
     if quip.rstrip()]
 
