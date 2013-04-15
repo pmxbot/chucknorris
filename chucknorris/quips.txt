@@ -68,3 +68,4 @@ Chuck Norris is the only person that can punch a cyclops between the eye.
 Chuck Norris can tie {his} shoes with {his} feet.
 When Chuck Norris does a commit, {he} doesn't push to the remote repository, {he} makes all clones pull from {him}.
 Chuck Norris can make tests run in negative time.
+Chuck Norris eats red herring and snipe for breakfast.
