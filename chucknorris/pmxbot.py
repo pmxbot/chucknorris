@@ -7,9 +7,9 @@ from pmxbot.karma import Karma
 from . import quips
 from . import pronoun
 
-@command('norris', aliases=('',),
-    doc='Chuck Norris has a website dedicated to pmxbot facts.')
+@command('norris')
 def norrisquote(client, event, channel, nick, rest):
+    'Chuck Norris has a website dedicated to pmxbot facts.'
     if rest:
         rest = rest.strip()
         Karma.store.change(rest, 2)
