@@ -12,7 +12,7 @@ Once you've done this, the !norris command will be available. However, due to
 the nature of the quips, all chat participants are treated with as the same
 gender ('male'). To give your female participants a nicer experience, a
 configuration parameter is provided to identify those nicks. Just add a list
-of 'female nicks' to your config.yaml:
+of 'female nicks' to your config.yaml::
 
     female nicks:
       - jen
