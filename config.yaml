@@ -1,0 +1,259 @@
+database: mongodb://mgo-co-1,mgo-co-2,mgo-co-3
+feed_interval: 15
+feeds:
+- channel: '#pmxbot'
+  linkurl: http://tinyurl.com/6zmylk
+  name: Google News PMX/PP
+  url: http://news.google.com/news?q=Polimetrix+OR+PollingPoint+OR+%22Polling+Point%22+OR+YouGovPolimetrix&output=rss&ned=:ePkh8BM9EwLbwQq0w4CFOFsAknAG2g
+- channel: '#pmxbot'
+  linkurl: http://tinyurl.com/5ozfpd
+  name: Google Blogs PMX/PP
+  url: http://blogsearch.google.com/blogsearch_feeds?client=news&scoring=d&q=PollingPoint+OR+%22Polling+point%22+OR+Polimetrix+OR+YouGovPolimetrix&num=10&safe=active&scoring=d&output=rss
+- channel: '#pmxbot'
+  linkurl: http://bit.ly/gnewsygbix
+  name: Google YG/BIX
+  url: http://news.google.com/news?hl=en&ned=&ie=UTF-8&scoring=n&q=YouGov+OR+%22You+Gov%22+OR+BrandIndex+OR+%22Brand+Index%22&output=rss&ned=:ePkh8BM9EwLbwQq0w4CFOFsAknAG2g
+- channel: '#pmxbot'
+  linkurl: http://bit.ly/pmxtwt4
+  name: Twitter PMX/PP
+  url: http://search.twitter.com/search?q=+PollingPoint+OR+Polimetrix+OR+%22Polling+Point%22+OR+YouGovPolimetrix+OR+YouGovPollingPoint+OR+%22YouGov+PollingPoint%22+-ISaidIDoToday
+- channel: '#pmxbot'
+  linkurl: http://bit.ly/ygtwt
+  name: Twitter YG
+  url: http://search.twitter.com/search.atom?q=YouGov+OR+BrandIndex+-RT+-%23tellus
+- channel: '#projects'
+  linkurl: https://intranet.polimetrix.com/timeline
+  name: Intranet
+  url: https://pmxbot:fEcAd6E98harUNa3@intranet.polimetrix.com/timeline?milestone=on&ticket=on&ticket_details=on&changeset=on&wiki=on&blog=on&max=12&daysback=15&format=rss
+- channel: '#inane'
+  linkurl: http://ygchallenge.wordpress.com
+  name: YGChallenge
+  url: http://ygchallenge.wordpress.com/feed
+- channel: '#inane'
+  linkurl: http://ygchallenge.wordpress.com
+  name: YGChallenge Comments
+  url: http://ygchallenge.wordpress.com/comments/feed
+- channel: '#is'
+  linkurl: https://jenkins.yougov.net/
+  name: JenkinsFailures
+  url: https://jenkins.yougov.net/rssFailed
+female nicks:
+- ashley
+- bencini
+- bernadetaw
+- carlyh
+- claudia
+- claudiah
+- claudia_h
+- delia
+- hannaht
+- helen
+- isabel
+- jen
+- jenny
+- katie
+- katya
+- kristi
+- maggie
+- marissa
+- nathalie
+- rebecca
+- sam
+- skhairy
+google_api__access_key: AIzaSyCbLlqz8tDP_PSNBqJqfKNJHQHwi_bXKAo
+google_translate_API_key: AIzaSyDP9ZJodgVX-CGxMmZIjSkzPGZcsfHKl1Q
+google_xkcd_search_engine_id: 003028701170137090288:4xk_ld76mpe
+log level: info
+log_channels:
+- '#support'
+- '#projects'
+- '#is'
+- '#spg'
+- '#bids'
+- '#sample'
+- '#cces'
+- '#dsde'
+- '#g'
+- '#g3'
+- '#gryphon'
+- '#bix'
+- '#panman'
+- '#econ'
+- '#topgun'
+- '#cumulus'
+- '#cms'
+- '#polaris'
+- '#analytics'
+- '#datamart'
+- '#panoptic'
+- '#devops'
+- '#ops_proposals'
+- '#codereviews'
+logs URL: http://irc-logs.yougov.net/
+lunch_choices:
+  PA:
+  - Pasta?
+  - Thaiphoon
+  - Pluto's
+  - Penninsula Creamery
+  - Kan Zeman
+  - Other Thai (King Krung)
+  - Jing Jing
+  - Mandarin Gourmet
+  - Pasta?
+  - Other Pasta (Pasta Pomodoro)
+  - Quiznos
+  - Subway
+  - Il Fornaio (sp)
+  - Longs
+  - Walgreens
+  - Chicken Ranch
+  - Kan Zeman
+  - Other Mediterranean
+  - Terrible Mediterranean
+  - Darbar
+  - Other Indian (on Lytton)
+  - Bad Thai (Siam Royal)
+  - Other Other Thai (Lytton)
+  - Other Other Other Thai (thaiphoon)
+  - Sushi (ex world-wraps)
+  - Miyaki
+  - $5 Japanese
+  - Pizza My Heart
+  - CPK
+  - 7-11
+  - Cheesecake Factory
+  - Empire Tap Room
+  - Gordon Biersch
+  - Old Pro
+  - Nolas
+  - Peninsula Diner
+  - Tamarin (Vietnamese)
+  - Three Seasons
+  - Chinese by the train
+  - Jamaican
+  - Taxis
+  - Osteria
+  - Plutos
+  - Whole Foods
+  - Noahs
+  - Starbucks
+  - Cafe Del Doge
+  - Round Table
+  - Zao Noodle
+  - Rangoon
+  - Copola
+  - Evvia
+  - Expensive Chinese (near prolific oven)
+  - Prolific Oven
+  - La Mornita
+  - Andale
+  - German Place
+  - German Bakery
+  - Luna Bella
+  - Italian across the street
+  - Elba
+  - Indian near the Gelato place
+  - Other bagel place
+  - Zibibo
+  - Mini-Zibibo/lulu petite
+  - Fratelli's Food Poisoning
+  - Sushi next door
+  - Spago
+  - Gelato
+  - Borders
+  - Bayleaf cafe
+  - Korean place near Mandarin
+  - Croissants by the train
+  - Palo Alto Creamery
+  canton:
+  - PB&J
+  - Dowskimanor
+  - Dowskiland
+  - Steal the kids' lunchables
+  cologne:
+  - Kl. Mensa
+  - Gr. Mensa
+  - Grieche
+  - Tuerke
+  - Mc Donalds
+  - Burger King
+  - Pizza Pazza
+  - Subway
+  - Croque
+  - Bistro 43
+  - Suelzer Haehnchengrill
+  - Buy Buy
+  - Metzgore beim Gottesweg
+  - Auszeit
+  london:
+  - The Market - Italian
+  - The Market - Burrito
+  - The Market - Thai
+  - The Market - Curry
+  - Subway
+  - Waitrose
+  - The Eagle
+  - Somerfield
+  - Pret A Manger
+other_channels:
+- '#inane'
+- '#pmxbot'
+password: pol1chat
+places:
+- Palo Alto, CA
+- San Francisco, CA
+- San Diego, CA
+- Medicine Hat, Canada
+- Austin, TX
+- Lima, Peru
+- Washington D.C.
+- '10013'
+- London, England
+- Copenhagen
+- Cologne
+- Dubai
+server_host: virc.paix.yougov.local
+server_port: 6697
+smtp_server: lex01.yougov.local
+thermometers:
+  palo alto: 10.1.0.100
+trac_url: https://pmxbot:fEcAd6E98harUNa3@dev.yougov.com/
+use_ssl: true
+web api: true
+web_host: 0.0.0.0
+yg feeds:
+  channel_projects:
+    bix:
+    - bix.ui
+    - zz9
+    - bix.qq7
+    - qq7
+    - bix2.ui
+    - bix.bixd1
+    - bix.bixd2
+    cumulus:
+    - cumulus
+    datamart:
+    - datamart
+    - unfoldr
+    - bridgekeeper
+    devops:
+    - chishop
+    - velociraptor
+    - yg.deploy
+    - yg.irc
+    - yg.router
+    dto:
+    - desktopops
+    gryphon:
+    - gryphon
+    - dragoman
+    - queso
+    panoptic:
+    - queso
+    - panoptic
+    - pan
+  check_interval: 5 minutes
+  default_channels:
+  - is
