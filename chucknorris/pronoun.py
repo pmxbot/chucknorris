@@ -1,6 +1,9 @@
+try:
+    from functools import lru_cache
+except ImportError:
+    from backports.functools_lru_cache import lru_cache
+
 import requests
-import cachecontrol.heuristics
-import jaraco.functools
 
 
 pronouns = dict(
@@ -36,19 +39,17 @@ def load_nicks(config):
     male_nicks.update(config.get('male nicks', []))
 
 
-@jaraco.functools.once
-def get_session():
-    adapter = cachecontrol.CacheControlAdapter(
-        heuristic=cachecontrol.heuristics.ExpiresAfter(days=30))
-
-    sess = requests.Session()
-    sess.mount('http://', adapter)
-    sess.mount('https://', adapter)
-    return sess
-
-
+@lru_cache(maxsize=None)
 def api_lookup(name):
-    session = get_session()
+    """
+    >>> api_lookup('chuck')['gender']
+    'male'
+    >>> api_lookup('norris')['gender']
+    'male'
+    >>> api_lookup('Chuck Norris')['gender'] is None
+    True
+    """
+    session = requests.Session()
     url = 'https://api.genderize.io?name={name}'.format(**locals())
     return session.get(url).json()
 
