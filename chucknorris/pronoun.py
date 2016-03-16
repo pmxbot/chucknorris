@@ -1,23 +1,31 @@
 pronouns = dict(
-    male = {
+    male={
         'his': 'his',
         'he': 'he',
         'He': 'He',
         'His': 'His',
         'him': 'him',
     },
-    female = {
+    female={
         'his': 'her',
         'he': 'she',
         'He': 'She',
         'His': 'Her',
         'him': 'her',
-    }
+    },
 )
+
+pronouns[None] = {
+    'his': 'their',
+    'he': 'they',
+    'He': 'They',
+    'His': 'Their',
+    'him': 'them',
+}
 
 female_nicks = set()
 male_nicks = set()
-default_gender = 'male'
+default_gender = None
 
 def load_nicks(config):
     female_nicks.update(config.get('female nicks', []))
@@ -38,7 +46,6 @@ def nick_gender(nick):
         return 'female'
     if nick in male_nicks:
         return 'male'
-    # default to male because there tends to be more of that going on
     return default_gender
 
 
