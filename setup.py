@@ -27,6 +27,7 @@ setup_params = dict(
 	include_package_data=True,
 	zip_safe=True,
 	install_requires=[
+		'requests',
 	],
 	setup_requires=[
 		'setuptools_scm',
