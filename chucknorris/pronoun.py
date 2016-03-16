@@ -32,6 +32,10 @@ def load_nicks(config):
     female_nicks.update(config.get('female nicks', []))
     male_nicks.update(config.get('male nicks', []))
 
+def api_lookup(name):
+    url = 'https://api.genderize.io?name={name}'.format(**locals())
+    return requests.get(url).json()
+
 def nick_gender(nick):
     """
     Return the gender of the nick.
@@ -46,8 +50,7 @@ def nick_gender(nick):
     if nick in male_nicks:
         return 'male'
 
-    res = requests.get('https://api.genderize.io?name=' + nick).json()
-    return res['gender']
+    return api_lookup(nick)['gender']
 
 def pronounify(sentence, orig_name, nick=None):
     """
