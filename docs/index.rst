@@ -1,5 +1,5 @@
 Welcome to chucknorris documentation!
-========================================
+=====================================
 
 .. toctree::
    :maxdepth: 1
