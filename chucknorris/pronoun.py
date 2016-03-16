@@ -1,4 +1,7 @@
 import requests
+import cachecontrol.heuristics
+import jaraco.functools
+
 
 pronouns = dict(
     male={
@@ -32,9 +35,23 @@ def load_nicks(config):
     female_nicks.update(config.get('female nicks', []))
     male_nicks.update(config.get('male nicks', []))
 
+
+@jaraco.functools.once
+def get_session():
+    adapter = cachecontrol.CacheControlAdapter(
+        heuristic=cachecontrol.heuristics.ExpiresAfter(days=30))
+
+    sess = requests.Session()
+    sess.mount('http://', adapter)
+    sess.mount('https://', adapter)
+    return sess
+
+
 def api_lookup(name):
+    session = get_session()
     url = 'https://api.genderize.io?name={name}'.format(**locals())
-    return requests.get(url).json()
+    return session.get(url).json()
+
 
 def nick_gender(nick):
     """
