@@ -28,6 +28,8 @@ setup_params = dict(
 	zip_safe=True,
 	install_requires=[
 		'requests',
+		'jaraco.functools',
+		'cachecontrol',
 	],
 	setup_requires=[
 		'setuptools_scm',
