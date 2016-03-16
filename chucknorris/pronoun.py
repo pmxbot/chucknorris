@@ -1,3 +1,5 @@
+import requests
+
 pronouns = dict(
     male={
         'his': 'his',
@@ -25,13 +27,10 @@ pronouns[None] = {
 
 female_nicks = set()
 male_nicks = set()
-default_gender = None
 
 def load_nicks(config):
     female_nicks.update(config.get('female nicks', []))
     male_nicks.update(config.get('male nicks', []))
-    globals().update(
-        default_gender=config.get('default gender', default_gender))
 
 def nick_gender(nick):
     """
@@ -46,8 +45,9 @@ def nick_gender(nick):
         return 'female'
     if nick in male_nicks:
         return 'male'
-    return default_gender
 
+    res = requests.get('https://api.genderize.io?name=' + nick).json()
+    return res['gender']
 
 def pronounify(sentence, orig_name, nick=None):
     """
