@@ -16,4 +16,3 @@ def test_pronounify():
 
 def test_quips():
 	assert 'tracy' in quips.random('tracy')
-	assert 'his' not in quips.random('tracy')
