@@ -51,8 +51,8 @@ def api_lookup(name):
     >>> api_lookup('#channel')['gender']
     """
     session = requests.Session()
-    url = 'https://api.genderize.io?name={name}'.format(**locals())
-    return session.get(url).json()
+    url = 'https://api.genderize.io'
+    return session.get(url, params=dict(name=name)).json()
 
 
 def nick_gender(nick):
