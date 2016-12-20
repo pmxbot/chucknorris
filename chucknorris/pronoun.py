@@ -48,6 +48,7 @@ def api_lookup(name):
     'male'
     >>> api_lookup('Chuck Norris')['gender'] is None
     True
+    >>> api_lookup('#channel')['gender']
     """
     session = requests.Session()
     url = 'https://api.genderize.io?name={name}'.format(**locals())
