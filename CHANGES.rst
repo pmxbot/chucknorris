@@ -1,3 +1,8 @@
+2.6
+===
+
+Moved hosting to Github with automated deployments by Travis-CI.
+
 2.5
 ===
 
