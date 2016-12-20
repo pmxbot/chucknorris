@@ -3,6 +3,8 @@
 
 Moved hosting to Github with automated deployments by Travis-CI.
 
+Fixed issue where ``!norris #channel`` would fail with a KeyError.
+
 2.5
 ===
 
