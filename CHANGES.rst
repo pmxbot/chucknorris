@@ -1,3 +1,8 @@
+2.7
+===
+
+Updated skeleton and added a couple quips.
+
 2.6
 ===
 
