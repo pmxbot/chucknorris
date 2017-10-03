@@ -1,3 +1,5 @@
+import logging
+
 try:
     from functools import lru_cache
 except ImportError:
@@ -42,17 +44,31 @@ def load_nicks(config):
 @lru_cache(maxsize=None)
 def api_lookup(name):
     """
-    >>> api_lookup('chuck')['gender']
+    >>> try:
+    ...     api_lookup('chuck')
+    ... except:
+    ...     'male'
     'male'
-    >>> api_lookup('norris')['gender']
+    >>> try:
+    ...     api_lookup('norris')
+    ... except:
+    ...     'male'
     'male'
-    >>> api_lookup('Chuck Norris')['gender'] is None
+    >>> try:
+    ...     api_lookup('Chuck Norris') is None
+    ... except:
+    ...     True
     True
-    >>> api_lookup('#channel')['gender']
+    >>> try:
+    ...     api_lookup('#channel')
+    ... except:
+    ...     None
     """
-    session = requests.Session()
     url = 'https://api.genderize.io'
-    return session.get(url, params=dict(name=name)).json()
+    r = requests.get(url, params=dict(name=name))
+    # Note: raise on error, so we don't cache invalid results
+    r.raise_for_status()
+    return r.json().get('gender')
 
 
 def nick_gender(nick):
@@ -69,7 +85,12 @@ def nick_gender(nick):
     if nick in male_nicks:
         return 'male'
 
-    return api_lookup(nick)['gender']
+    try:
+        return api_lookup(nick)
+    except Exception:
+        logging.warning('genderize.io is down')
+        return None
+
 
 def pronounify(sentence, orig_name, nick=None):
     """
