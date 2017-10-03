@@ -1,3 +1,8 @@
+2.8
+===
+
+Fallback to defaults when api.genderize.io is down.
+
 2.7
 ===
 
