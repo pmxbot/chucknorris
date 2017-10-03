@@ -3,8 +3,6 @@
 
 .. image:: https://img.shields.io/pypi/pyversions/chucknorris.svg
 
-.. image:: https://img.shields.io/pypi/dm/chucknorris.svg
-
 .. image:: https://img.shields.io/travis/yougov/chucknorris/master.svg
    :target: http://travis-ci.org/yougov/chucknorris
 
