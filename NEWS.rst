@@ -1,3 +1,13 @@
+v2.9.0
+======
+
+Features
+--------
+
+- Refreshed and modernized the package.
+- Require Python 3.8 or later.
+
+
 2.8
 ===
 
