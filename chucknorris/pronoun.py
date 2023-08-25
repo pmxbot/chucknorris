@@ -36,6 +36,7 @@ pronouns[None] = {
 female_nicks = set()
 male_nicks = set()
 
+
 def load_nicks(config):
     female_nicks.update(config.get('female nicks', []))
     male_nicks.update(config.get('male nicks', []))

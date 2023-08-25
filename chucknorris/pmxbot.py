@@ -7,6 +7,7 @@ from pmxbot.karma import Karma
 from . import quips
 from . import pronoun
 
+
 @command('norris')
 def norrisquote(client, event, channel, nick, rest):
     'Chuck Norris has a website dedicated to pmxbot facts.'
@@ -17,6 +18,7 @@ def norrisquote(client, event, channel, nick, rest):
     else:
         rcpt = channel
     return quips.random(rcpt)
+
 
 def init():
     pronoun.load_nicks(pmxbot.config)
