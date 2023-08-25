@@ -1,10 +1,12 @@
 import functools
 import logging
 
+from typing import Union, Dict
+
 import requests
 
 
-pronouns = dict(
+pronouns: Dict[Union[str, None], Dict[str, str]] = dict(
     male={
         'his': 'his',
         'he': 'he',
