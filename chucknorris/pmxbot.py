@@ -1,5 +1,3 @@
-from __future__ import absolute_import
-
 import pmxbot
 from pmxbot.core import command
 from pmxbot.karma import Karma
