@@ -1,9 +1,5 @@
+import functools
 import logging
-
-try:
-    from functools import lru_cache
-except ImportError:
-    from backports.functools_lru_cache import lru_cache
 
 import requests
 
@@ -42,7 +38,7 @@ def load_nicks(config):
     male_nicks.update(config.get('male nicks', []))
 
 
-@lru_cache(maxsize=None)
+@functools.lru_cache(maxsize=None)
 def api_lookup(name):
     """
     >>> try:
