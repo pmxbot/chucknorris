@@ -1,21 +1,25 @@
 .. image:: https://img.shields.io/pypi/v/chucknorris.svg
-   :target: https://pypi.org/project/chucknorris
+   :target: `PyPI link`_
 
 .. image:: https://img.shields.io/pypi/pyversions/chucknorris.svg
+   :target: `PyPI link`_
 
-.. image:: https://img.shields.io/travis/yougov/chucknorris/master.svg
-   :target: http://travis-ci.org/yougov/chucknorris
+.. _PyPI link: https://pypi.org/project/chucknorris
+
+.. image:: https://github.com/pmxbot/chucknorris/workflows/Automated%20Tests/badge.svg
+   :target: https://github.com/pmxbot/chucknorris/actions?query=workflow%3A%22Automated+Tests%22
+   :alt: Automated Tests
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/psf/black
+   :alt: Code style: Black
+
+.. .. image:: https://readthedocs.org/projects/skeleton/badge/?version=latest
+..    :target: https://skeleton.readthedocs.io/en/latest/?badge=latest
 
 A library of quips about Chuck Norris, including a plugin for pmxbot to
 apply the quips to your chat colleagues.
 
-
-License
-=======
-
-License is indicated in the project metadata (typically one or more
-of the Trove classifiers). For more details, see `this explanation
-<https://github.com/jaraco/skeleton/issues/1>`_.
 
 Usage
 =====
