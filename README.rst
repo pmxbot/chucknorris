@@ -24,6 +24,8 @@ apply the quips to your chat colleagues.
 Usage
 =====
 
+::
+
     >>> import chucknorris.quips as q
     >>> q.random('Janet')
     'Janet doesn't wear a watch. She decides what time it is.'
