@@ -54,10 +54,10 @@ def api_lookup(name):
     ...     'male'
     'male'
     >>> try:
-    ...     api_lookup('Chuck Norris') is None
+    ...     api_lookup('Chuck Norris')
     ... except:
-    ...     True
-    True
+    ...     'male'
+    'male'
     >>> try:
     ...     api_lookup('#channel')
     ... except:
