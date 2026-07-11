@@ -56,7 +56,12 @@ def api_lookup(name):
     ...     'male'
     'male'
     >>> try:
-    ...     api_lookup('#channel')
+    ...     api_lookup('Janice')
+    ... except:
+    ...     'female'
+    'female'
+    >>> try:
+    ...     api_lookup('12345')
     ... except:
     ...     None
     """
