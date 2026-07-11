@@ -1,5 +1,4 @@
-from chucknorris import pronoun
-from chucknorris import quips
+from chucknorris import pronoun, quips
 
 
 def setup_module(module):

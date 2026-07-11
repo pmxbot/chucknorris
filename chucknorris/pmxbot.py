@@ -2,8 +2,7 @@ import pmxbot
 from pmxbot.core import command
 from pmxbot.karma import Karma
 
-from . import quips
-from . import pronoun
+from . import pronoun, quips
 
 
 @command('norris')
