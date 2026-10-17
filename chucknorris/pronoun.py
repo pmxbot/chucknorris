@@ -3,6 +3,8 @@ import logging
 
 import requests
 
+log = logging.getLogger(__name__)
+
 pronouns: dict[str | None, dict[str, str]] = dict(
     male={
         'his': 'his',
@@ -37,7 +39,7 @@ def load_nicks(config):
     male_nicks.update(config.get('male nicks', []))
 
 
-@functools.lru_cache(maxsize=None)
+@functools.cache
 def api_lookup(name):
     """
     >>> try:
@@ -88,8 +90,8 @@ def nick_gender(nick):
 
     try:
         return api_lookup(nick)
-    except Exception:
-        logging.warning('genderize.io is down')
+    except Exception:  # noqa: BLE001 # any failure of the external service falls back to unknown
+        log.warning('genderize.io is down')
         return None
 
 
